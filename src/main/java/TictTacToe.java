@@ -3,17 +3,13 @@ public class TictTacToe {
         while(Game.winner(Board.getBoard()) == 0){
 
             int playerMove = PlayerMove.getPlayerMoveChoice();
-            System.out.println("this is player move: " + playerMove);
-            while (!Board.registerPlayerMove(playerMove)){
+            while (!Board.registerPlayerMove(playerMove, 'X')){
                 Board.drawBoard();
                 playerMove = PlayerMove.getPlayerMoveChoice();
-
-                if(Board.registerPlayerMove(playerMove))
-                    break;
             }
 
             int CPUMove = PlayerMove.getPCMoveChoice();
-            while (!Board.registerCPUMove(CPUMove)){
+            while (!Board.registerPlayerMove(CPUMove, 'O')){
                Board.drawBoard();
                CPUMove = PlayerMove.getPCMoveChoice();
             }

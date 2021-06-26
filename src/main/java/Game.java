@@ -6,38 +6,43 @@ public class Game extends PlayerMove
         getPlayerMoveChoice();
     }
     public static int winner(char[][] board){
-        if(board[0][0] == 'X' && board[0][1] == 'X' && board[0][2] == 'X')
+        if(board[0][0] == 'X' && board[0][2] == 'X' && board[0][4] == 'X')
             return 1;
-        else if(board[1][0] == 'X' && board[1][1] == 'X' && board[1][2] == 'X')
+        else if(board[2][0] == 'X' && board[2][2] == 'X' && board[2][4] == 'X')
             return 1;
-        else if(board[2][0] == 'X' && board[2][1] == 'X' && board[2][2] == 'X')
+        else if(board[2][0] == 'X' && board[2][1] == 'X' && board[2][4] == 'X')
             return 1;
-        else if(board[0][0] == 'X' && board[1][0] == 'X' && board[2][0] == 'X')
+        else if(board[4][0] == 'X' && board[4][2] == 'X' && board[4][4] == 'X')
             return 1;
-        else if(board[0][1] == 'X' && board[1][1] == 'X' && board[2][1] == 'X')
+        else if(board[0][0] == 'X' && board[2][0] == 'X' && board[4][0] == 'X')
             return 1;
-        else if(board[0][2] == 'X' && board[1][2] == 'X' && board[2][2] == 'X')
+        else if(board[0][2] == 'X' && board[2][2] == 'X' && board[4][2] == 'X')
             return 1;
-        else if(board[0][0] == 'X' && board[1][1] == 'X' && board[2][2] == 'X')
+        else if(board[0][4] == 'X' && board[2][4] == 'X' && board[4][4] == 'X')
             return 1;
-        else if(board[0][2] == 'X' && board[1][1] == 'X' && board[2][0] == 'X')
+        else if(board[0][0] == 'X' && board[2][2] == 'X' && board[4][4] == 'X')
             return 1;
-        else if(board[0][0] == 'O' && board[0][1] == 'O' && board[0][2] == 'O')
-            return 2;
-        else if(board[1][0] == 'O' && board[1][1] == 'O' && board[1][2] == 'O')
-            return 2;
-        else if(board[2][0] == 'O' && board[2][1] == 'O' && board[2][2] == 'O')
-            return 2;
-        else if(board[0][0] == 'O' && board[1][0] == 'O' && board[2][0] == 'O')
-            return 2;
-        else if(board[0][1] == 'O' && board[1][1] == 'O' && board[2][1] == 'O')
-            return 2;
-        else if(board[0][2] == 'O' && board[1][2] == 'O' && board[2][2] == 'O')
-            return 2;
-        else if(board[0][0] == 'O' && board[1][1] == 'O' && board[2][2] == 'O')
-            return 2;
-        else if(board[0][2] == 'O' && board[1][1] == 'O' && board[2][0] == 'O')
-            return 2;
+        else if(board[0][4] == 'X' && board[2][2] == 'X' && board[4][0] == 'X')
+            return 1;
+        else if(board[0][0] == 'O' && board[0][2] == 'O' && board[0][4] == 'O')
+            return 1;
+        else if(board[2][0] == 'O' && board[2][2] == 'O' && board[2][4] == 'O')
+            return 1;
+        else if(board[2][0] == 'O' && board[2][1] == 'O' && board[2][4] == 'O')
+            return 1;
+        else if(board[4][0] == 'O' && board[4][2] == 'O' && board[4][4] == 'O')
+            return 1;
+        else if(board[0][0] == 'O' && board[2][0] == 'O' && board[4][0] == 'O')
+            return 1;
+        else if(board[0][2] == 'O' && board[2][2] == 'O' && board[4][2] == 'O')
+            return 1;
+        else if(board[0][4] == 'O' && board[2][4] == 'O' && board[4][4] == 'O')
+            return 1;
+        else if(board[0][0] == 'O' && board[2][2] == 'O' && board[4][4] == 'O')
+            return 1;
+        else if(board[0][4] == 'O' && board[2][2] == 'O' && board[4][0] == 'O')
+            return 1;
+
         else
             return 0;
     }
